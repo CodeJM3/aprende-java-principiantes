@@ -1,15 +1,15 @@
 public class Coco {
   
-  private float xPos, yPos;
-  private float diametro;
+  public float xPos, yPos;
+  public float diametro;
   private color colorCoco;
-  private float gravedad;
+  private  float gravedad;
   private float yVel;
   
-  public Coco(float xPos, float yPos) {
+  public Coco(float xPos, float yPos, float diametro) {
     this.xPos = xPos;
     this.yPos = yPos;
-    diametro = 20;
+    this.diametro = diametro;
     colorCoco = color(66, 50, 3);
     gravedad = 1;
     yVel = 0;

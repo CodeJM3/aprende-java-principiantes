@@ -1,18 +1,17 @@
 public class Coche {
   
-  private float xPos;
-  private float yPos;
+  public float xPos, yPos;
   private float xVel;
   private float anchura;
-  private float altura;
+  public float altura;
   private color c;
   
-  public Coche(float xPos, float yPos, float xVel) {
+  public Coche(float xPos, float yPos, float xVel, float anchura, float altura) {
     this.xPos = xPos;
     this.yPos = yPos;
     this.xVel = xVel;
-    anchura = 100;
-    altura = 50;
+    this.anchura = anchura;
+    this.altura = altura;
     c = color(255, 0, 0);
   }
   
@@ -25,12 +24,14 @@ public class Coche {
     stroke(0);
     fill(c);
     rectMode(CENTER);
-    rect(xPos, yPos-altura/2, anchura, altura);
+    rect(xPos, yPos, anchura, altura);
   }
   
   private void conducir() {
     xPos = (xPos+xVel)%width;
+    
   }
+  
   
   /*
   private void conducir() {
